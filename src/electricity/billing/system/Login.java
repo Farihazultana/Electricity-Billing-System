@@ -1,8 +1,11 @@
 package electricity.billing.system;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class Login extends JFrame {
+    JTextField userText, passwordText;
+    Choice loginChoice;
     Login(){
         super("Login");
 
@@ -10,7 +13,7 @@ public class Login extends JFrame {
         username.setBounds(300,60, 100, 20);
         add(username);
 
-        JTextField userText = new JTextField();
+        userText = new JTextField();
         userText.setBounds(400,60, 100, 20);
         add(userText);
 
@@ -18,7 +21,7 @@ public class Login extends JFrame {
         password.setBounds(300, 100, 100, 20);
         add(password);
 
-        JTextField passwordText = new JTextField();
+        passwordText = new JTextField();
         passwordText.setBounds(400,100, 100, 20);
         add(passwordText);
 
@@ -26,9 +29,15 @@ public class Login extends JFrame {
         login.setBounds(300, 140, 100, 20);
         add(login);
 
+        loginChoice = new Choice();
+        loginChoice.add("Admin");
+        loginChoice.add("Customer");
+        loginChoice.setBounds(400, 140, 100, 20);
+        add(loginChoice);
+
 
         setSize(640, 300);
-        setLocation(650,300);
+        setLocation(650,350);
         setLayout(null);
         setVisible(true);
     }
