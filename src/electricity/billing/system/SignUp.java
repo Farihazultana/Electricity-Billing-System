@@ -7,6 +7,7 @@ import java.awt.*;
 public class SignUp extends JFrame {
     Choice loginAsChoice;
     TextField meterText, employerText, userNameText, nameText, passwordText;
+    JButton create, back;
     SignUp(){
         super("Sign-Up Page");
 
@@ -82,6 +83,17 @@ public class SignUp extends JFrame {
             }
         });
 
+        create = new JButton("Create");
+        create.setBackground(new Color(79, 142, 238)); //changed button background color
+        create.setForeground(Color.white); //change text color
+        create.setBounds(50, 285, 100, 25);
+        add(create);
+
+        back = new JButton("Back");
+        back.setBackground(new Color(79, 142, 238));
+        back.setForeground(Color.white);
+        back.setBounds(180, 285, 100, 25);
+        add(back);
 
         setSize(600, 380);
         setLocation(650, 350);
