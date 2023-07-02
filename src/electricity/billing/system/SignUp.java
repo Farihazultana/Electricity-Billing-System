@@ -2,6 +2,8 @@ package electricity.billing.system;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 
 public class SignUp extends JFrame {
     Choice loginAsChoice;
@@ -64,6 +66,22 @@ public class SignUp extends JFrame {
         passwordText = new TextField();
         passwordText.setBounds(170, 235, 125, 20);
         add(passwordText);
+
+        loginAsChoice.addItemListener(e -> {
+            String user = loginAsChoice.getSelectedItem();
+            if(user.equals("Customer")){
+                employer.setVisible(false);
+                employerText.setVisible(false);
+                meterNo.setVisible(true);
+                meterText.setVisible(true);
+            }
+            else{
+                employer.setVisible(true);
+                employerText.setVisible(true);
+                meterNo.setVisible(false);
+                meterText.setVisible(false);
+            }
+        });
 
 
         setSize(600, 380);
