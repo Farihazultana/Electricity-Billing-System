@@ -2,8 +2,7 @@ package electricity.billing.system;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
+
 
 public class SignUp extends JFrame {
     Choice loginAsChoice;
