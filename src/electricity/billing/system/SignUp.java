@@ -95,6 +95,14 @@ public class SignUp extends JFrame {
         back.setBounds(180, 285, 100, 25);
         add(back);
 
+        // Add Image
+        ImageIcon boyIcon = new ImageIcon(ClassLoader.getSystemResource("icon/SignUp/boy.png"));
+        Image boyImg = boyIcon.getImage().getScaledInstance(250, 250,  Image.SCALE_DEFAULT);
+        ImageIcon signUpIcon = new ImageIcon(boyImg);
+        JLabel signUpLabel = new JLabel(signUpIcon);
+        signUpLabel.setBounds(320, 45, 250, 250);
+        add(signUpLabel);
+
         setSize(600, 380);
         setLocation(650, 350);
         setLayout(null);
