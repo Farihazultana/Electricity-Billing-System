@@ -11,6 +11,8 @@ public class SignUp extends JFrame {
     SignUp(){
         super("Sign-Up Page");
 
+        getContentPane().setBackground(new Color(168, 203, 255));
+
         //Texts and TextFields
         JLabel createAs = new JLabel("Create Account As");
         createAs.setBounds(30, 50, 125, 20);
