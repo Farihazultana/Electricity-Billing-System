@@ -2,9 +2,11 @@ package electricity.billing.system;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 
-public class SignUp extends JFrame {
+public class SignUp extends JFrame implements ActionListener {
     Choice loginAsChoice;
     TextField meterText, employerText, userNameText, nameText, passwordText;
     JButton create, back;
@@ -89,12 +91,14 @@ public class SignUp extends JFrame {
         create.setBackground(new Color(79, 142, 238)); //changed button background color
         create.setForeground(Color.white); //change text color
         create.setBounds(50, 285, 100, 25);
+        create.addActionListener(this);
         add(create);
 
         back = new JButton("Back");
         back.setBackground(new Color(79, 142, 238));
         back.setForeground(Color.white);
         back.setBounds(180, 285, 100, 25);
+        back.addActionListener(this);
         add(back);
 
         // Add Image
@@ -112,5 +116,16 @@ public class SignUp extends JFrame {
     }
     public static void main(String[] args) {
         new SignUp();
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == create){
+            //
+
+        } else if (e.getSource() == back) {
+            setVisible(false);
+            new Login();
+        }
     }
 }
